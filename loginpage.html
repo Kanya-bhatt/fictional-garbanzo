@@ -1,0 +1,232 @@
+<html>
+<head>
+<style>
+body {
+background-color: #6a8a9f;
+text-align: center;
+font-size: 30px;
+font-family: serif;
+}
+.container{
+      display: inline-block;
+      
+
+    }
+    .typed-out{
+      overflow: hidden;
+      color: #00297a;
+      
+      white-space: nowrap;
+      animation: 
+      typing 2s steps(20, end) forwards;
+      
+      font-size: 1.6rem;
+      width: 0;
+      height: 60px;
+      font-size: 50px;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+.a{
+	width: 100%;
+	height: 100%;
+}
+.b{
+	background-color: whitesmoke;
+	font-family: serif;
+	font-size: 30px;
+	border: 1px solid black;
+
+}
+.c{
+	padding: 90px;
+}
+.d{
+	background-color: black;
+	width: 100%;
+	height: 50px;
+
+}
+.e{
+	height: 50px;
+	width: 20px;
+	padding: 50px;
+	float: right
+	
+
+	
+}
+.f{
+	height: 50px;
+	width: 50%;
+	float: left;
+}
+.f1{
+	height: 50px;
+	width: 50%;
+	float: right;
+}
+.check{
+	font-size: 20px;
+}
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+</style>
+<script src="file:///Users/kanyabhatt/Desktop/login.js"></script>
+<script>
+	function show() {
+		
+		var x = document.getElementById('password');
+		if(x.type == "text"){
+			x.type = "password";
+	}
+	else{
+		x.type = "text";
+	}
+}
+</script>
+<title> Registration Form </title>
+</head>
+<body>
+	<div class="a">
+		<div class="d">
+	
+		<img id="myImg" alt="Snow"src="https://cdn-icons-png.flaticon.com/512/4433/4433179.png" height="50px" width="50px">
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+		
+	</div>
+	<div class="b">
+		<div class="container">
+  <div class="typed-out"><b>LOGIN PAGE</b></div>
+</div>
+
+</div>
+<div class="c">
+<form autocompelete="on" action="file:///Users/kanyabhatt/Desktop/home.html">
+
+<label for="uname"><b>Username:</b></label>
+<input type="text" id="username" name="username", placeholder="enter username"
+size="20" required> <br> <br>
+<label for="password"><b>Password:</b></label>
+<input type="password" id="password" name="password", placeholder="enter
+password" required><br> <br>
+<div class="check">
+<input type="checkbox" onclick = "return show()" id="show_password" name="show_password" required>
+
+<label for="show_password">Show Password</label></div>
+<br> 
+
+<input type="submit" onclick="return login()" value="Login">
+
+</div>
+
+</form>
+</div>
+</body>
+</html>

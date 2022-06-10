@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<title>Home</title>
+	<style>
+		body{
+			/*border: 3px double black;*/
+			background-color: #618ba1;
+			font-family: "Times New Roman", Times, serif;
+			/*outline-style: groove;
+			outline-color: black;
+			outline-width: 4px;
+			outline-offset: 2px;*/
+			/*font-size: 50px;
+			font-family: cursive;
+			font-style: initial;
+			color: black;*/
+			
+		}
+		.a{
+			width: 100%;
+			background-color: #618ba1;
+			padding: 0px;
+			margin: 0px;
+			border: 3px double yellow;
+			
+		}
+		.b{
+			padding: 100px;
+			background-image: url("https://d2gg9evh47fn9z.cloudfront.net/1600px_COLOURBOX34905368.jpg" );
+			background-repeat: no-repeat;
+			border: 1px solid black;
+			text-align: center;
+			height: 1000px;
+
+		}
+
+		.c{
+			background-color:black;
+			width: 100%;
+			height: 100px;
+			color: darkorange;
+			font-family: "Times New Roman", Times, serif;
+			
+		}
+		.navigation{
+			background-color: black;
+			width: 100%;
+			height: 50px;
+			text-align: center;
+
+		}
+		.photo{
+			/*transform: rotate(20deg);*/
+			scale: 1.2;
+		}
+		.about_me{
+			padding: 100px;
+			
+			height: 50px;
+			color: darkorange;
+
+
+		}
+		.Interests{
+			padding: 100px;
+			
+			height: 50px;
+			color: darkorange;
+		}
+		.contact{
+			padding: 100px;
+			
+			height: 50px;
+			color: darkorange;
+		}
+		.feedback{
+			text-align: center;
+			font-size: 20px;
+			font-family: cursive;
+			color: orange;
+			background-color: #e4f2fe;
+		}
+		.timeline{
+			padding: 100px;
+			
+			height: 50px;
+			color: darkorange;
+		}
+		#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+		.container {
+  position: relative;
+  width: 50%;
+  border: 5px solid yellow;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.container:hover .overlay {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+	@media (max-width:991px) {
+
+            html {
+                font-size: 55%;
+            }
+
+            body {
+                padding: 0;
+            }
+
+            header {
+                position: relative;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                background: #222;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                z-index: 1000;
+                flex-flow: column;
+                padding: 8rem 2rem;
+                width: 60rem;
+                text-align: center;
+            }
+
+            header.active {
+                left: 0%;
+            }
+        }
+
+        @media (max-width:450px) {
+
+            html {
+                font-size: 50%
+            }
+
+            header {
+                width: 100%;
+            }
+        }
+	</style>
+
+</head>
+<body>
+	<!-- <div class="a">
+
+		<h class="b">
+			<h1> hello pretty lady </h1>
+		</h>
+		
+</div>
+
+	</div> -->
+	
+<div class="a">
+	<div class="navigation">
+		<!-- <div class="topnav"> -->
+			<!-- <a href="">Link1</a> -->
+			<div class="photo">
+				<div class="tooltip">
+				<a href="/Users/kanyabhatt/Desktop/home.html">
+		<img id="myImg" alt="Snow" src="https://cdn-icons-png.flaticon.com/512/4433/4433179.png" height="50px" width="50px"></a>
+		 <span class="tooltiptext">Home Page.</span>
+		 <script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+</div>
+		<!-- <a href="">Link2</a>
+		<a href="">Link3</a> -->
+		</div>
+	</div>
+
+	<h1 direction="right" style="text-align: center; width: 100%;font-size:30px;"><u>Home Page</u></h1>
+
+	<div class="b">
+		<marquee direction="left" style="font-size: 20px;"><i>"Success is a lousy teacher. It seduces smart people into thinking they cant loose." <span style="font-size: 12px;"> -Bill Gates</span></i></marquee>
+		<div class="about_me">
+			<div class="container">
+			<a href="/Users/kanyabhatt/Desktop/project.html">
+         <img src="https://cdn-icons-png.flaticon.com/512/2922/2922566.png" height="100px" width="100px">
+     </a>
+     <div class="overlay">
+    <div class="text"><a href="file:///Users/kanyabhatt/Desktop/project.html">Click on me!!</a></div>
+  </div>
+</div>
+     <p style="font-size: 25px; width: 100%;text-align: center;"> About me </p>
+
+		</div>
+		<div class="Interests">
+			<div class="container">
+			<a href="/Users/kanyabhatt/Desktop/what_makes_me_different.html">
+         <img src="https://cdn-icons-png.flaticon.com/512/3362/3362087.png" height="100px" width="100px">
+     </a>
+      <div class="overlay">
+    <div class="text"><a href="file:///Users/kanyabhatt/Desktop/what_makes_me_different.html">Click on me!!</a></div>
+  </div>
+</div>
+     <p style="width: 100%;font-size: 25px; text-align:center;">Interests</p>
+		</div>
+		<div class="block"></div>
+		
+
+<div class="timeline">
+			<div class="container">
+			<a href="/Users/kanyabhatt/Desktop/contact.html">
+         <img src="https://cdn-icons-png.flaticon.com/512/4394/4394560.png" height="100px" width="100px">
+     </a>
+      <div class="overlay">
+    <div class="text"><a href="file:///Users/kanyabhatt/Desktop/timeline.html">Click on me!!</a></div>
+
+  </div>
+</div>
+<p style="width: 100%;font-size: 25px; text-align:center;">Timeline</p>
+    
+	</div>	
+	<div class="contact">
+			<div class="container">
+			<a href="/Users/kanyabhatt/Desktop/contact.html">
+         <img src="https://cdn-icons-png.flaticon.com/512/2343/2343723.png" height="100px" width="100px">
+     </a>
+      <div class="overlay">
+    <div class="text"><a href="file:///Users/kanyabhatt/Desktop/contact.html">Click on me!!</a></div>
+  </div>
+</div>
+ <p style="width: 100%;font-size: 25px; text-align:center;">Contact</p>
+		</div>
+</div>
+	<div class="c">
+
+	
+	<div class="feedback">
+	<button style="background-color: yellow;"onclick="typeWriter()">Click me</button>
+
+<p id="demo"></p>
+
+<script>
+var i = 0;
+var txt = 'I would love to hear your feedback, Just click on the photo below';
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+	<a href="/Users/kanyabhatt/Desktop/feedback.html">
+         <img id="myImg" alt="Snow"src="https://cdn-icons-png.flaticon.com/512/1484/1484584.png" height="90px" width="90px">
+     </a>
+     <script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+	
+</div>
+</div>
+
+</body>
+</html>
